@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(12, 162, 39);
+}
+
+header {
+  margin-bottom: 20px;
+  color: #ffff;
+  cursor: default;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.container {
+  background-color: rgb(27, 219, 34);
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 600px;
+  max-height: 525px;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-top: 20px;
+  color: #eee;
+  cursor: default;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  height: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  height: 100px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  display: block;
+  height: 5px;
+  background-color: transparent;
+}
+
+.container p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+.input-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  width: 460px;
+  height: 30px;
+  padding-right: 0px;
+  margin-right: 0;
+  outline: none;
+  padding: 5px;
+  border: 2px solid #1abc9c;
+  color: #eee;
+  background-color: rgb(13, 129, 28);
+}
+
+.input-section button {
+  width: 80px;
+  padding-left: 0;
+  margin-left: 0;
+  padding: 11px;
+  outline: none;
+  background-color: #2ecc71;
+  border: none;
+  cursor: pointer;
+}
+
+.input-section button:hover {
+  box-shadow: #35493e;
+}
+
+.deleteBtn .deleteIcon {
+  margin-left: 5px;
+  /* Add 5px space to the left of the icon */
+  background-color: rgb(65, 46, 49);
+}
+
+.container #todoList,
+#completedTasks {
+  list-style: none;
+  margin: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: #eee;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#todoList button {
+  border: none;
+  background-color: rgb(65, 46, 46);
+}
+
+#todoList li {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  padding: 10px;
+  border: 2px solid #eee;
+}
+
+#todoList .taskInput {
+  outline: none;
+  border: none;
+  padding: 2px;
+  background-color: rgb(65, 46, 46);
+  width: 89%;
+  color: azure;
+}
+
+#completedTasks button {
+  border: none;
+  background-color: rgb(65, 46, 46);
+}
+
+#completedTasks li {
+  margin: -1px;
+  padding: 10px;
+  border: 2px solid #eee;
+  list-style: none;
+}
+
+#completedTasks .taskInput {
+  outline: none;
+  border: none;
+  padding: 2px;
+  background-color: rgb(46, 56, 65);
+  width: 89%;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  vertical-align: middle;
+  /* Align checkbox and label in the same line */
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  color: white;
+}
+
+input[type="checkbox"]:checked + .taskInput {
+  text-decoration: line-through;
+  color: #e03434;
+  /* You can change the color here */
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 350px;
+  }
+
+  .input-section input {
+    max-width: 250px;
+  }
+
+  #todoList .taskInput {
+    max-width: 80%;
+    min-width: 50%;
+  }
+  #completedTasks .taskInput {
+    width: 81%;
+  }
+}
